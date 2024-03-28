@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "tictactoefunc.h"
 
 #define SIZE 3
@@ -13,7 +14,9 @@ int main() {
         if (player) {
             if (check_position(pole, x, y)) {
                 pole[x - 1][y - 1] = 1;
+                system("clear");
             } else {
+                system("clear");
                 printf("Нельзя поставить крестик в эту клеточку\n");
                 continue;
             }
@@ -21,7 +24,9 @@ int main() {
         } else {
             if (check_position(pole, x, y)) {
                 pole[x - 1][y - 1] = 2;
+                system("clear");
             } else {
+                system("clear");
                 printf("Нельзя поставить нолик в эту клеточку\n");
                 continue;
             }
@@ -29,6 +34,7 @@ int main() {
             player = 1;
         }
     }
+    system("clear");
     winner(pole, is_win(pole));
     return 0;
 }
