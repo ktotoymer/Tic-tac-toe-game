@@ -5,12 +5,14 @@
 #ifndef TIC_TAC_TOE_GAME_TICTACTOEFUNC_H
 #define TIC_TAC_TOE_GAME_TICTACTOEFUNC_H
 
-void show_pole(char **);
+#define SIZE 3
 
-int is_win(char **);
+void show_pole(char pole[][SIZE]);
 
-void winner(char **, int);
+int is_win(char pole[][SIZE]);
 
-int check_position(char **, int, int);
+void winner(char pole[][SIZE], int res);
+
+int check_position(char pole[][SIZE], int x, int y);
 
 #endif //TIC_TAC_TOE_GAME_TICTACTOEFUNC_H
